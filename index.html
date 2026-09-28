@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Collingwood Mayor Compass 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --ink:#10283d; --ink-2:#3d5569; --muted:#5a6f80;
+  --page:#eaf6fb; --page-2:#f6fbfd; --card:#ffffff; --tint:#eef7fb; --line:#cfe1ea;
+  --bay:#1f7aa3; --bay-2:#48acd0; --pine:#2f7d5b;
+  --coral:#ee6446; --coral-2:#d24f33; --sun:#ffc63d; --sun-2:#e5a91c; --warn:#fff5d6;
+  --c-hamlin:#5b12b8; --c-hillis:#1f6b43; --c-jeffery:#8a1a5c; --c-sandberg:#c48a07;
+  --r-lg:24px; --r-md:16px; --r-sm:10px;
+  --stroke:2.5px solid var(--ink);
+  --lift:0 3px 0 var(--ink);
+  --lift-lg:0 5px 0 var(--ink);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ink:#e9f3f8; --ink-2:#c3d5e0; --muted:#9db3c2;
+    --page:#0d2233; --page-2:#0a1b29; --card:#15324a; --tint:#1c3f5b; --line:#2b5170;
+    --warn:#3a3317;
+    --c-hamlin:#b58cf5; --c-hillis:#5fd08f; --c-jeffery:#f07ab8; --c-sandberg:#f0c04a;
+    --lift:0 3px 0 #04101a; --lift-lg:0 5px 0 #04101a;
+    --stroke:2.5px solid #04101a;
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#e9f3f8; --ink-2:#c3d5e0; --muted:#9db3c2;
+  --page:#0d2233; --page-2:#0a1b29; --card:#15324a; --tint:#1c3f5b; --line:#2b5170;
+  --warn:#3a3317;
+  --c-hamlin:#b58cf5; --c-hillis:#5fd08f; --c-jeffery:#f07ab8; --c-sandberg:#f0c04a;
+  --lift:0 3px 0 #04101a; --lift-lg:0 5px 0 #04101a;
+  --stroke:2.5px solid #04101a;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px);height:100%}
+body{margin:0;min-height:100%;color:var(--ink);background:var(--page-2);
+  background-image:radial-gradient(1200px 500px at 50% -120px,var(--page),transparent 70%);
+  font-family:"Nunito",ui-rounded,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-weight:500;font-size:16px;line-height:1.55;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+main{max-width:640px;margin:0 auto;padding:14px 16px 64px}
+h1,h2,h3,.display{font-family:"Fredoka",ui-rounded,"Trebuchet MS",system-ui,sans-serif;font-weight:600;line-height:1.12;letter-spacing:-.01em;margin:0}
+h1{font-size:clamp(1.75rem,6.4vw,2.35rem)}
+h2{font-size:1.5rem;margin-bottom:10px}
+h3{font-size:1.12rem}
+p{margin:0 0 12px}
+ul{margin:0 0 12px;padding-left:20px}
+li{margin-bottom:6px}
+.muted{color:var(--muted);font-size:.94rem}
+.small{font-size:.85rem;color:var(--muted)}
+a{color:var(--bay);font-weight:700;text-underline-offset:2px}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
+button{font:inherit;color:inherit;cursor:pointer;-webkit-tap-highlight-color:transparent}
+
+/* Masthead */
+.poster{position:relative;border:var(--stroke);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--lift-lg);background:#8fd0ec}
+.hero svg{display:block;width:100%;height:auto;aspect-ratio:400/236}
+.title{position:relative;margin:-30px 14px 0;background:var(--card);border:var(--stroke);border-radius:var(--r-md);box-shadow:var(--lift);padding:14px 16px 12px;z-index:2}
+.title .kicker{display:inline-flex;align-items:center;gap:6px;background:var(--sun);color:#10283d;border:2px solid #10283d;border-radius:99px;padding:1px 10px;font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:.82rem;margin-bottom:8px}
+.title p{margin:6px 0 0;color:var(--muted);font-size:.93rem;font-weight:700}
+body.compact .poster{display:none}
+body.compact .title{margin:0 0 0;display:flex;align-items:center;gap:12px;padding:10px 14px}
+body.compact .title .kicker{display:none}
+body.compact .title h1{font-size:1.2rem}
+body.compact .title p{margin:1px 0 0;font-size:.82rem}
+.title .mark{display:none;flex:none;width:40px;height:40px}
+body.compact .title .mark{display:block}
+
+/* Tabs */
+.tabs{display:flex;gap:4px;margin:16px 0 18px;padding:4px;background:var(--card);border:var(--stroke);border-radius:99px;box-shadow:var(--lift)}
+.tab{flex:1 1 auto;min-width:0;background:transparent;border:0;border-radius:99px;padding:8px 6px;font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:.95rem;color:var(--ink-2);white-space:nowrap;transition:background .15s,color .15s}
+.tab[aria-selected="true"]{background:#10283d;color:#fff}
+.cd-short{display:none}
+body.compact .cd-long{display:none}
+body.compact .cd-short{display:inline}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .tab[aria-selected="true"]{background:var(--sun);color:#10283d}}
+
+/* Surfaces */
+.card{background:var(--card);border:var(--stroke);border-radius:var(--r-lg);box-shadow:var(--lift-lg);padding:20px;margin-bottom:20px}
+.notice{background:var(--warn);border:2px solid var(--sun-2);border-radius:var(--r-md);padding:12px 14px;font-size:.9rem;margin-bottom:16px;color:var(--ink)}
+.notice strong{font-weight:800}
+.hidden{display:none}
+
+/* Buttons */
+.btn{display:block;width:100%;border:var(--stroke);border-radius:99px;padding:13px 18px;background:var(--coral);color:#fff;font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:1.1rem;letter-spacing:.005em;text-align:center;box-shadow:0 4px 0 #10283d;transition:transform .08s ease,box-shadow .08s ease,background .15s}
+.btn:hover:not([disabled]){background:var(--coral-2)}
+.btn:active:not([disabled]){transform:translateY(3px);box-shadow:0 1px 0 #10283d}
+.btn.secondary{background:var(--card);color:var(--ink)}
+.btn.secondary:hover{background:var(--tint)}
+.btn[disabled]{opacity:.4;cursor:default}
+.btn+.btn{margin-top:14px}
+.linkbtn{background:none;border:0;color:var(--muted);text-decoration:underline;text-underline-offset:3px;padding:8px 2px;font-weight:700;font-size:.92rem}
+.row{display:flex;gap:12px;align-items:center;justify-content:center}
+.navrow{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center}
+.navrow .btn+.btn{margin:0}
+.navrow .secondary{width:auto;padding:12px 20px}
+
+/* Intro dock */
+.dock{position:relative;margin:18px 0 14px;padding:12px 8px 0;border-radius:var(--r-md);background:linear-gradient(180deg,#48acd0,#1f7aa3);border:var(--stroke);overflow:hidden}
+.fleet{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;position:relative;z-index:1}
+.fleet div{text-align:center}
+.fleet svg{display:block;margin:0 auto;width:100%;max-width:70px;height:auto}
+.fleet span{display:inline-block;margin:2px 0 10px;background:var(--card);color:var(--ink);border:2px solid #10283d;border-radius:99px;padding:0 9px;font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:.85rem}
+.lede{font-size:1.05rem}
+
+/* Quiz */
+.route{position:relative;display:flex;justify-content:space-between;align-items:center;margin:6px 6px 4px;height:34px}
+.route::before{content:"";position:absolute;left:4px;right:4px;top:50%;border-top:3px dotted var(--line);transform:translateY(-50%)}
+.route i{position:relative;z-index:1;width:12px;height:12px;border-radius:50%;background:var(--card);border:2px solid var(--line)}
+.route i.done{background:var(--bay);border-color:#10283d}
+.route i.now{width:30px;height:30px;border:0;background:transparent}
+.route i.now svg{position:absolute;left:-7px;top:-12px;width:44px;height:44px}
+.stopnote{display:flex;justify-content:space-between;font-family:"Fredoka",system-ui,sans-serif;font-weight:500;color:var(--muted);margin:0 6px 12px;font-size:.92rem}
+.badge{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.badge .em{flex:none;width:52px;height:52px;border-radius:var(--r-md);background:var(--tint);border:var(--stroke);display:grid;place-items:center;font-size:26px;transform:rotate(-4deg);box-shadow:var(--lift)}
+.badge .where{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:1.02rem}
+.badge .topic{color:var(--muted);font-size:.85rem;font-weight:700}
+.stmt{font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:clamp(1.25rem,4.8vw,1.5rem);line-height:1.22;margin:0 0 10px;letter-spacing:-.005em}
+.why{display:flex;gap:10px;align-items:flex-start;background:var(--tint);border-radius:var(--r-sm);padding:10px 12px;font-size:.93rem;margin:0}
+.why b{font-weight:800}
+.faces{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin:18px 0 14px}
+.face{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-height:84px;padding:10px 2px 8px;border:var(--stroke);border-radius:var(--r-md);background:var(--card);box-shadow:0 3px 0 #10283d;transition:transform .12s cubic-bezier(.3,1.6,.5,1),background .12s,box-shadow .08s}
+.face:hover{transform:translateY(-2px)}
+.face:active{transform:translateY(2px);box-shadow:0 1px 0 #10283d}
+.face .e{font-size:1.85rem;line-height:1;transition:transform .15s cubic-bezier(.3,1.8,.5,1)}
+.face .l{font-size:.7rem;font-weight:800;line-height:1.1;text-align:center;color:var(--ink-2)}
+.face[aria-pressed="true"]{background:var(--sun);transform:translateY(-4px)}
+.face[aria-pressed="true"] .e{transform:scale(1.18) rotate(-6deg)}
+.face[aria-pressed="true"] .l{color:#10283d}
+.star{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:2px dashed var(--line);border-radius:99px;background:transparent;padding:10px 12px;font-weight:800;font-size:.93rem;color:var(--ink-2);transition:background .12s,border-color .12s}
+.star[aria-pressed="true"]{background:var(--warn);border:2px solid var(--sun-2);color:var(--ink)}
+
+/* Results */
+.lane{position:relative;height:96px;margin-bottom:6px;border:var(--stroke);border-radius:var(--r-md);overflow:hidden;background:linear-gradient(180deg,#48acd0,#1c6f97)}
+.lane::after{content:"";position:absolute;inset:auto 0 18px 0;height:2px;background:repeating-linear-gradient(90deg,rgba(255,255,255,.28) 0 10px,transparent 10px 22px)}
+.lane .top{position:absolute;left:12px;right:10px;top:9px;display:flex;justify-content:space-between;align-items:center;gap:8px;z-index:4}
+.lane .who{display:flex;align-items:center;gap:8px;font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:.98rem;color:#fff;text-shadow:0 1px 0 rgba(16,40,61,.55)}
+.lane .rank{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:#fff;color:#10283d;border:2px solid #10283d;font-size:.8rem;text-shadow:none}
+.lane .pct{background:#fff;color:#10283d;border:2px solid #10283d;border-radius:99px;padding:1px 10px;font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:.92rem;white-space:nowrap}
+.lane .finish{position:absolute;right:0;top:0;bottom:0;width:14px;z-index:1;background:repeating-conic-gradient(#fff 0 25%,#10283d 0 50%) 0 0/14px 14px;opacity:.9;border-left:2px solid #10283d}
+.lane .wake{position:absolute;left:2%;bottom:16px;height:0;border-top:3px dashed rgba(255,255,255,.8);width:0;z-index:2;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.lane .b{position:absolute;bottom:4px;left:2%;width:54px;z-index:3;transition:left 1.6s cubic-bezier(.2,.8,.2,1)}
+.lane.best{box-shadow:0 0 0 4px var(--sun),var(--lift)}
+.winner{display:flex;gap:14px;align-items:center}
+.winner svg{flex:none;width:84px;height:84px;background:linear-gradient(180deg,#48acd0,#1f7aa3);border:var(--stroke);border-radius:var(--r-md);padding:6px}
+.shared{background:var(--sun);color:#10283d;border:var(--stroke);border-radius:var(--r-lg);box-shadow:var(--lift);padding:16px;margin-bottom:20px;font-weight:800}
+.resume{display:flex;gap:12px;flex-wrap:wrap}
+.resume .btn{flex:1 1 200px;margin:0}
+.resume .btn+.btn{margin:0}
+
+/* Breakdown */
+details{border-top:2px solid var(--line);padding:12px 0}
+details:first-of-type{border-top:0;padding-top:4px}
+summary{cursor:pointer;font-weight:800;list-style-position:outside}
+summary::marker{color:var(--bay)}
+.pos{margin:10px 0 0;padding:11px 13px;border-left:6px solid var(--line);background:var(--tint);border-radius:var(--r-sm);font-size:.92rem}
+.tag{display:inline-block;vertical-align:1px;font-size:.72rem;font-weight:800;border-radius:99px;padding:1px 9px;margin-left:6px;border:1.5px solid var(--line);background:var(--card);color:var(--ink-2);white-space:nowrap}
+.starsum h3{margin-top:18px}
+
+/* Compare */
+.tablewrap{overflow-x:auto;border:var(--stroke);border-radius:var(--r-lg);background:var(--card);margin-bottom:20px;box-shadow:var(--lift-lg)}
+table{border-collapse:separate;border-spacing:0;min-width:760px;width:100%;font-size:.86rem}
+th,td{padding:10px 12px;text-align:left;vertical-align:top;border-bottom:1.5px solid var(--line)}
+thead th{background:var(--tint);font-family:"Fredoka",system-ui,sans-serif;font-weight:600;font-size:.95rem}
+thead th .hd{display:flex;align-items:center;gap:6px}
+thead th svg{width:28px;height:28px;flex:none}
+tbody tr:nth-child(even) td{background:color-mix(in srgb,var(--tint) 45%,var(--card))}
+td:first-child,th:first-child{font-weight:800;position:sticky;left:0;min-width:118px;border-right:1.5px solid var(--line);background:var(--card)}
+thead th:first-child{background:var(--tint)}
+tr:last-child td{border-bottom:0}
+
+/* Candidates */
+.cand{padding:0;overflow:hidden}
+.cand .head{display:flex;gap:14px;align-items:center;padding:16px 20px;background:linear-gradient(180deg,#48acd0,#1f7aa3);border-bottom:var(--stroke)}
+.cand .head svg{flex:none;width:70px;height:70px}
+.cand .head h2{margin:0;color:#fff;text-shadow:0 1px 0 rgba(16,40,61,.5)}
+.cand .head p{margin:3px 0 0;display:inline-block;background:#fff;color:#10283d;border:2px solid #10283d;border-radius:99px;padding:0 10px;font-size:.82rem;font-weight:800}
+.cand .body{padding:16px 20px 18px}
+.cand .body li::marker{color:var(--cc)}
+
+/* Vote */
+.dates{display:grid;gap:12px;margin:12px 0 4px}
+.date{display:grid;grid-template-columns:62px 1fr;gap:14px;align-items:center}
+.date .d{border:var(--stroke);border-radius:var(--r-md);text-align:center;background:var(--card);box-shadow:var(--lift);font-family:"Fredoka",system-ui,sans-serif;font-weight:600;line-height:1;overflow:hidden}
+.date .d small{display:block;background:var(--coral);color:#fff;font-size:.72rem;padding:3px 0;border-bottom:2px solid #10283d}
+.date .d span{display:block;font-size:1.45rem;padding:6px 0 7px}
+.date p{margin:0}
+
+.foot{font-size:.82rem;color:var(--muted);margin-top:28px;text-align:center;padding:0 10px}
+
+.bob{animation:bob 2.8s ease-in-out infinite;transform-box:fill-box;transform-origin:center bottom}
+.bob.d1{animation-delay:-.7s}.bob.d2{animation-delay:-1.4s}.bob.d3{animation-delay:-2.1s}
+@keyframes bob{50%{transform:translateY(-2px) rotate(2deg)}}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:50}
+.confetti span{position:absolute;top:-30px;font-size:24px;animation:fall 2.8s ease-in forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg);opacity:.9}}
+
+@media (max-width:380px){
+  .card{padding:16px}
+  .faces{gap:5px}
+  .face{min-height:76px}
+  .face .e{font-size:1.6rem}
+  .tab{font-size:.86rem;padding:8px 4px}
+}
+@media (prefers-reduced-motion: reduce){
+  .bob{animation:none}
+  .lane .b,.lane .wake{transition:none}
+  .face,.face .e,.btn,.tab,.star{transition:none}
+  .confetti{display:none}
+}
+</style>
+</head>
+<body>
+<main>
+  <div class="poster"><div class="hero" id="hero" role="img" aria-label="Illustration of Collingwood: Town Hall's clock tower, the grain terminals, Blue Mountain and the lighthouse, with four sailboats on Georgian Bay"></div></div>
+  <div class="title">
+    <span class="mark" id="mark" aria-hidden="true"></span>
+    <div>
+      <span class="kicker">2026 municipal election</span>
+      <h1>Collingwood Mayor Compass</h1>
+      <p><span class="cd-long" id="countdown">Election day: Monday, October 26, 2026</span><span class="cd-short" id="countdown2">Election day: Oct 26</span></p>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" role="tab" id="tab-quiz" aria-selected="true">Quiz</button>
+    <button class="tab" role="tab" id="tab-compare" aria-selected="false">Compare</button>
+    <button class="tab" role="tab" id="tab-cands" aria-selected="false">Candidates</button>
+    <button class="tab" role="tab" id="tab-about" aria-selected="false">Vote</button>
+  </div>
+
+  <section id="view-quiz"></section>
+  <section id="view-compare" class="hidden"></section>
+  <section id="view-cands" class="hidden"></section>
+  <section id="view-about" class="hidden"></section>
+
+  <p class="foot">Independent civic project. Not affiliated with the Town of Collingwood, CollingwoodToday or any candidate. Always check the candidates' own words and the Town's election page before you vote.</p>
+</main>
+<div class="confetti" id="confetti" aria-hidden="true"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  var SRC = {
+    roads: {label:"CollingwoodToday: roads, water & sewer (Sept 2026)", url:"https://www.collingwoodtoday.ca/2026-municipal-election-news/election-heres-where-mayoral-candidates-stand-on-roads-water-and-sewer-12797506"},
+    arts:  {label:"CollingwoodToday: arts & rec centres (Sept 24, 2026)", url:"https://www.collingwoodtoday.ca/2026-municipal-election-news/election-heres-where-the-mayor-candidates-stand-on-future-arts-and-rec-centres-12797737"},
+    profiles:{label:"CollingwoodToday: mayoral candidate profiles (Sept 2026)", url:"https://www.collingwoodtoday.ca/2026-municipal-election-news/election-here-are-collingwoods-2026-mayoral-candidates-12787764"},
+    hamBudget:{label:"Town of Collingwood: Mayor Hamlin's 2026 budget statement", url:"https://www.collingwood.ca/governance-engagement/news-notices/statement-mayor-hamlin-2026-municipal-budget"},
+    sandAnn:{label:"Sandberg candidacy announcement (June 29, 2026)", url:"https://www.mycollingwood.ca/article/norm-sandberg-announces-candidacy-for-mayor-of-collingwood.html"},
+    hillis:{label:"CollingwoodToday: Hillis enters race", url:"https://www.collingwoodtoday.ca/2026-municipal-election-news/last-minute-mayoral-candidate-joins-collingwood-race-12698285"},
+    jefAnn:{label:"Jeffery candidacy announcement", url:"https://www.mycollingwood.ca/article/kathy-jeffery-announces-her-candidacy-for-mayor-of-the-town-of-collingwood.html"},
+    town:{label:"Town of Collingwood elections page", url:"https://www.collingwood.ca/governance-engagement/elections"},
+    research:{label:"Candidate research summary (campaign platforms, Town records, local reporting; compiled Sept 2026)", url:""},
+    survey:{label:"Georgian Bay News candidate questionnaire by Ron Shulman (Hamlin did not respond)", url:""}
+  };
+
+  var CANDS = [
+    {id:"hamlin", name:"Yvonne Hamlin", role:"Incumbent mayor", color:"var(--c-hamlin)",
+     bio:[
+      "On council since 2018 and mayor since 2022. Practised municipal and planning law in Toronto for more than 25 years. Her pitch is continuity: finish the major projects now moving.",
+      "Campaign emphasizes the water-treatment expansion (her campaign says the province has committed $150M of a $270M project), new recreation and arts facilities, affordable housing, the waterfront, healthcare and physician recruitment.",
+      "Her 2026 budget, issued under strong mayor powers, raised the blended property tax 2.39%. Says she has delegated CAO hiring/firing and has not seen a need to use the powers otherwise.",
+      "Did not return the Georgian Bay News questionnaire, so there is less written detail from her than from the other three."
+     ], src:["profiles","hamBudget","research"]},
+    {id:"hillis", name:"Jon Hillis", role:"Tech entrepreneur, first-time candidate", color:"var(--c-hillis)",
+     bio:[
+      "Moved to Collingwood in 2022. Founded Tenure, BenchFund, Collingwood Eats and Techskis, and the Collingwood Volleyball Club and Flag Football. Theme: \u201cGrow. Without losing us.\u201d",
+      "Four platform pillars: housing and affordability, infrastructure and services, local economy, quality of life. Wants residents to see what was promised, what it costs, who's responsible and whether it worked.",
+      "In his written questionnaire he said \u201cno, never\u201d to voluntarily using discretionary strong-mayor powers and would delegate CAO appointment to council. That is firmer than his earlier interview.",
+      "Wants to protect downtown, build \u201cup and out\u201d elsewhere, plan beyond 2051 and investigate annexation into Clearview. Has floated exploring managed encampments for people experiencing homelessness."
+     ], src:["hillis","profiles","survey","research"]},
+    {id:"jeffery", name:"Kathy Jeffery", role:"Five-term councillor", color:"var(--c-jeffery)",
+     bio:[
+      "Born and raised in Collingwood, five terms on council, and has represented the town through the Federation of Canadian Municipalities. Campaign theme: listening first.",
+      "Would follow Innisfil's model and delegate every power that can be delegated; committed to delegating CAO authority to council within 30 days.",
+      "Moved the motion for the water/wastewater public corporation expression of interest. Introduced the motion that created the Affordable Housing Task Force, which led to the Affordable Housing Master Plan.",
+      "Leans on the town's new long-term financial model (about 4.8% annual tax increases 2027 to 2035 to fund the current project list, not binding) and wants the roughly $4M road reserve spent on potholes."
+     ], src:["jefAnn","profiles","survey","research"]},
+    {id:"sandberg", name:"Norm Sandberg", role:"Former four-term councillor, engineer", color:"var(--c-sandberg)",
+     bio:[
+      "Council 1994 to 2010, later a senior engineering technologist (Ainley Group, Nuclear Waste Management Organization) and past leader at AMO and Ontario Small Urban Municipalities. Finished second for mayor in 2022.",
+      "Has published a 10-paper policy library covering water, governance, parking, finance, transportation, county relations, housing, economic development and recreation/culture.",
+      "Central theme: \u201cInfrastructure before crisis.\u201d Wants assets ranked by condition, safety, failure risk, growth need and lifetime cost, growth paying for growth, and gradual zero-based budgeting.",
+      "Downtown parking concepts at 140 Ste. Marie and Second/Pine would combine public parking, rental housing and commercial space on town-owned land. He calls them concepts needing independent review, not approved projects."
+     ], src:["sandAnn","profiles","survey","research"]}
+  ];
+
+  // stance: -2 strongly disagree ... +2 strongly agree; s:null = no documented position found
+  var QUESTIONS = [
+    {id:"delegate", topic:"Strong mayor powers",
+     text:"The mayor should hand strong-mayor powers back to council and the CAO wherever legally possible.",
+     help:"Since May 2025, Collingwood's mayor has extra powers, including proposing the budget and hiring the CAO. Some can be delegated; the budget power cannot.",
+     pos:{
+       hamlin:{s:1, n:"Has delegated CAO hiring/firing and says she has used the powers sparingly, not seeing a need. But she did issue the 2026 budget under the power.", src:"research"},
+       hillis:{s:2, n:"Questionnaire: 'no, never' to voluntarily using discretionary powers; would delegate CAO appointment to council. Where the law requires the mayor to act, he'd do it openly and involve council.", src:"survey"},
+       jeffery:{s:2, n:"Would follow Innisfil and delegate everything that can be delegated; committed to returning CAO authority to council within 30 days.", src:"survey"},
+       sandberg:{s:2, n:"Would return delegable powers to council or the CAO through a resolution at the first council meeting and reserve the powers for exceptional cases such as urgent needs, provincial priorities or council deadlock.", src:"survey"}
+     }},
+    {id:"arts", topic:"Arts centre",
+     text:"The town itself should build, own and operate a new arts centre.",
+     help:"The arts centre is the most contested project. Consider the downtown location and the parking question too.",
+     pos:{
+       hamlin:{s:2, n:"Strongest supporter. Says council has chosen a site (not yet public), wants it downtown, and wants parking solved first, then fundraising and preliminary design.", src:"research"},
+       hillis:{s:1, n:"Supports it but suggests arts space could be integrated into or beside the multi-use recreation facility at 725 Tenth Line first, with a larger standalone venue later when population supports it.", src:"survey"},
+       jeffery:{s:0, n:"Wants community demand to decide priority and scale. Says the rec facility has stronger broad demand and questions whether 600 seats is right.", src:"arts"},
+       sandberg:{s:-2, n:"Supports having an arts centre but not the town building, owning and operating it. Prefers private development and operation, possibly on town land under a long-term lease with reduced or waived charges.", src:"arts"}
+     }},
+    {id:"murf", topic:"Recreation facility",
+     text:"Building a multi-use recreation facility (MURF) should be a top priority for the town.",
+     help:"All four candidates support some kind of municipally owned multi-use recreation facility. They differ on speed and sequencing.",
+     pos:{
+       hamlin:{s:1, n:"Supports it and wants partners such as the YMCA. Once land is secured, the town needs to work out what it can afford. Worries the town may not be setting aside enough for the MURF and arts centre.", src:"research"},
+       hillis:{s:2, n:"Calls it a 'must', arguing existing sports facilities are already heavily booked.", src:"survey"},
+       jeffery:{s:1, n:"Favourable and says demand is strong, but wants to listen to residents on what to build before committing.", src:"arts"},
+       sandberg:{s:0, n:"Supports planning and securing land, but wants an updated needs assessment, a review of Central Park's potential, YMCA/school-board partnerships, phasing and a fit with the long-term financial plan. Doesn't want to build more capacity than the population supports.", src:"survey"}
+     }},
+    {id:"water", topic:"Water & wastewater",
+     text:"Collingwood should support moving its water and wastewater system into a shared public corporation if that helps finance and speed up expansion.",
+     help:"In August, council voted to submit an expression of interest to the province. It was not a vote to create the corporation.",
+     pos:{
+       hamlin:{s:0, n:"Not opposed but highly cautious. Wants answers on asset compensation, inheriting other municipalities' debt and who decides where infrastructure goes. Unhappy with aspects of the COLLUS sale / EPCOR ownership. Investigate first, don't commit.", src:"research"},
+       hillis:{s:1, n:"Supports exploring it as basic due diligence, but says he'd need clear answers on ownership, local control, rates, debt, accountability and existing assets before backing a corporation.", src:"roads"},
+       jeffery:{s:2, n:"Put the motion forward. Sees benefit in 'uploading' responsibility and says it could expedite the wastewater plant expansion.", src:"roads"},
+       sandberg:{s:0, n:"Supports exploring but wants Collingwood to keep ownership and control unless evidence supports change. Same questions on ownership, rates, debt and assets.", src:"research"}
+     }},
+    {id:"growth", topic:"Development charges",
+     text:"Developers, not existing taxpayers, should cover the cost of the infrastructure that growth requires.",
+     help:"Development charges are fees on new construction that pay for growth-related infrastructure.",
+     pos:{
+       hamlin:{s:1, n:"Her campaign says growth-related costs are being handled through development charges. She did not answer the questionnaire on this.", src:"research"},
+       hillis:{s:1, n:"Would hold general residential charges, selectively reduce them for attainable/workforce housing with affordability agreements and clawbacks, and not shift any shortfall to existing taxpayers.", src:"survey"},
+       jeffery:{s:1, n:"Would keep general development charges rather than cut them further unless other governments make municipalities whole and savings clearly reach buyers.", src:"survey"},
+       sandberg:{s:2, n:"'Growth pays for growth.' Developers who need new water connections should pay for them. Would hold charges without offsetting senior-government funding, with targeted deferrals for workforce housing.", src:"roads"}
+     }},
+    {id:"infra", topic:"Roads & infrastructure",
+     text:"Infrastructure spending should be ranked by condition, safety and lifetime cost, even ahead of more visible or popular projects.",
+     help:"The town's infrastructure has an estimated replacement cost of about $1.08 billion.",
+     pos:{
+       hamlin:{s:1, n:"Pragmatic: asset management, lifecycle planning and senior-government grants where available. Points to about 30 road projects in 2026 and wants more spent on road line painting.", src:"research"},
+       hillis:{s:1, n:"Infrastructure planning must precede growth, and maintenance matters as much as building. Accepts the roughly $15M funding gap as the current planning estimate.", src:"survey"},
+       jeffery:{s:1, n:"Wants better prioritization using the long-term financial model and better construction coordination, and wants the roughly $4M road reserve spent on deteriorating roads now.", src:"research"},
+       sandberg:{s:2, n:"'Infrastructure before crisis.' Ranks assets by condition, public safety, failure risk, growth needs and whole-life cost. Would close the funding gap with a mix of reserves, debt, development charges and senior-government funding.", src:"roads"}
+     }},
+    {id:"tax", topic:"Taxes",
+     text:"Property tax increases should be kept as low as possible, even if some projects are delayed.",
+     help:"The 2026 increase was 2.39%. The town's long-term model points to roughly 4.8% a year for 2027 to 2035 to fund the current project list, though those figures aren't binding.",
+     pos:{
+       hamlin:{s:1, n:"Wants increases as low as possible while keeping service levels. Says a zero increase would require choosing which services residents give up.", src:"research"},
+       hillis:{s:0, n:"No specific tax commitment. Emphasizes efficiency and using technology to cut costs.", src:"research"},
+       jeffery:{s:0, n:"Wants the long-term financial model to set priorities. Criticized how the 2026 increase was set before council decided what it wanted from staff.", src:"research"},
+       sandberg:{s:0, n:"Won't promise a tax cut before seeing the numbers and won't treat increases as automatic. Wants lifecycle costing and gradual zero-based budgeting.", src:"research"}
+     }},
+    {id:"storm", topic:"Stormwater",
+     text:"Stormwater and flood prevention should be one of the town's top spending priorities.",
+     help:"Council recently approved a stormwater master plan, described as roughly a $35.5M program.",
+     pos:{
+       hamlin:{s:1, n:"Sees the master plan as an important roadmap. Floated storing stormwater beneath sports fields to cut costs.", src:"research"},
+       hillis:{s:1, n:"Supports more attention and investment and calls the master plan relatively straightforward.", src:"research"},
+       jeffery:{s:2, n:"Calls it a major issue, citing recurring flooding and insurance claims, and supports implementing the approved program.", src:"research"},
+       sandberg:{s:1, n:"Wants the master plan implemented rather than handling flooding one emergency at a time.", src:"research"}
+     }},
+    {id:"housing-fund", topic:"Housing",
+     text:"The town should put a fixed amount of municipal money into an affordable housing reserve every year.",
+     help:"Jeffery's plan continues $350,000 a year. Others emphasize different tools.",
+     pos:{
+       hamlin:{s:null, n:"Points to incentives, the ARU program, short-term-rental limits and attracting developers rather than a dedicated annual contribution. Her 2026 budget highlights affordable housing unit gains.", src:"research"},
+       hillis:{s:0, n:"Supports the Affordable Housing Master Plan but says delivery has been too slow. Wants to measure units funded and completed, rents and prices, how long affordability lasts, cost per unit and approval times. No numeric target.", src:"survey"},
+       jeffery:{s:2, n:"Would continue the $350,000 annual contribution, alongside municipal land, grants, partnerships, the Rapid ARU program and incentives. No fixed unit target, though she cites a need of about 1,300 units by 2030.", src:"survey"},
+       sandberg:{s:0, n:"Focuses on workforce rental housing via faster approvals, municipal land, targeted incentives, public/private partnerships, a housing summit and county advocacy. Refuses to promise a fixed unit count.", src:"survey"}
+     }},
+    {id:"land", topic:"Housing",
+     text:"The town should use its own land and public-private partnerships to create workforce and affordable housing.",
+     help:"This covers using town-owned land, working with non-profits and the private sector, and partnering with Simcoe County.",
+     pos:{
+       hamlin:{s:null, n:"No stated commitment on town land or partnerships found. She favours incentives and courting developers who have overlooked Collingwood.", src:"research"},
+       hillis:{s:2, n:"Supports using town land and working with the County, non-profits and private partners, and speeding approvals without treating that as a blank cheque for growth.", src:"survey"},
+       jeffery:{s:2, n:"Would use municipal land, grants and partnerships, and incentives for non-profit and private affordable-housing builders, and work with Simcoe County.", src:"survey"},
+       sandberg:{s:2, n:"Wants municipal land and public/private partnerships to work harder, including mixed-use parkade concepts that keep the land in town ownership.", src:"research"}
+     }},
+    {id:"density", topic:"Development",
+     text:"Buildings of around 12 storeys are acceptable in suitable parts of town if that limits sprawl.",
+     help:"Candidates were asked about tall development near established neighbourhoods.",
+     pos:{
+       hamlin:{s:0, n:"Recognizes taller buildings can reduce sprawl, but says 12 storeys near established single-family neighbourhoods raises legitimate concerns.", src:"research"},
+       hillis:{s:1, n:"Wants to build 'up and out' outside downtown while protecting the downtown core.", src:"research"},
+       jeffery:{s:1, n:"Accepts 12-storey development in appropriate areas to avoid sprawl and protect greenspace, while preserving character and the heritage district.", src:"research"},
+       sandberg:{s:0, n:"Supports infill and a mix of housing types under reasonable rules. Describes himself as pro-planning rather than pro- or anti-development. Not specific on height.", src:"research"}
+     }},
+    {id:"pace", topic:"Growth",
+     text:"Collingwood should try to slow the pace of growth.",
+     help:"All four accept that Collingwood will keep growing. The question is about attitude to pace.",
+     pos:{
+       hamlin:{s:1, n:"Would personally prefer somewhat slower development, while acknowledging a mayor has limited control over pace.", src:"research"},
+       hillis:{s:-1, n:"Wants to prepare for substantial growth, look past the Official Plan horizon to 2051 and beyond, and even investigate annexation into Clearview.", src:"research"},
+       jeffery:{s:0, n:"Smart growth while protecting character and heritage.", src:"research"},
+       sandberg:{s:-1, n:"Sees growth as inevitable; says infrastructure planning and approvals have to move together. Warns overly complicated rules or fees could discourage investment.", src:"research"}
+     }},
+    {id:"parking", topic:"Downtown parking",
+     text:"The town should build structured, mixed-use parking downtown on municipal land.",
+     help:"Sandberg has proposed concepts at 140 Ste. Marie St and Second/Pine St with roughly 428 structured spaces, 72 rental apartments and about 19,200 sq. ft. of commercial space. He calls them ideas needing independent review.",
+     pos:{
+       hamlin:{s:1, n:"Wants downtown parking addressed before an arts centre goes ahead. No specific structure or design found.", src:"research"},
+       hillis:{s:null, n:"Wants to protect downtown but has no detailed public parking plan that I found.", src:"research"},
+       jeffery:{s:null, n:"Not a major detailed plank that I found.", src:"research"},
+       sandberg:{s:2, n:"Major plank: convert municipal surface lots into mixed-use developments with public parking, rental housing and commercial space, keeping land in municipal ownership.", src:"research"}
+     }}
+  ];
+
+  var SCALE = [
+    {v:2, t:"Strongly agree"},
+    {v:1, t:"Agree"},
+    {v:0, t:"Neutral / mixed"},
+    {v:-1, t:"Disagree"},
+    {v:-2, t:"Strongly disagree"}
+  ];
+
+  var COMPARE = {
+    cols:["Issue","Hamlin","Hillis","Jeffery","Sandberg"],
+    rows:[
+      ["Strong-mayor powers","Use sparingly; CAO hiring delegated","'No, never' to voluntarily using discretionary powers","Delegate back where possible","Delegate back; use only in exceptional cases"],
+      ["Governing style","Collaborative council; continuity","Collaboration, accountability, transparency","More council role, less concentration with mayor/CAO","Consensus, formal governance structure"],
+      ["Taxes","As low as possible while keeping service","No set rate; efficiency and technology","Use long-term financial model to set priorities","Financial sustainability, lifecycle costing, zero-based budgeting"],
+      ["Roads & infrastructure","Continue program; seek grants","Plan for growth; maintain what exists","Better prioritization; spend road reserve","'Infrastructure before crisis'; condition/risk/lifecycle"],
+      ["Water corporation","Open to studying; major questions","Explore as due diligence","Strongest interest in moving it upward","Explore, but keep ownership/control unless evidence supports change"],
+      ["Stormwater","Implement master plan; underground storage idea","More investment and attention","Major priority","Implement master plan rather than react to flooding"],
+      ["Housing","Incentives, ARUs, attract developers","Scale programs that actually deliver units","Continue AHMP; $350K/yr reserve; municipal land","Workforce housing, faster approvals, municipal land/PPPs"],
+      ["Housing target","No numeric target found","No numeric target","No formal target; cites 1,300 units by 2030","No numeric target"],
+      ["12-storey buildings","Concept OK in places; neighbourhood concerns","Density outside downtown; protect downtown","Necessary to avoid sprawl","Infill/mixed housing under reasonable rules"],
+      ["Arts centre","Strongly supports; downtown","Supports; maybe start inside the MURF","Community demand sets scale and priority","Supports, but privately developed/owned/operated"],
+      ["MURF","Supports; wants partners and funding","A 'must'","Favourable; community-driven priority","Supports planning/land; needs analysis and phasing"],
+      ["Downtown parking","Solve before downtown arts centre","Protect downtown; less detail","No major plank found","Major plank: mixed-use municipal parking"],
+      ["Development pace","Would prefer slower growth","Prepare for growth, incl. post-2051","Smart growth, protect character","Growth continues, infrastructure alongside"],
+      ["Regional cooperation","Open but cautious","Explore options","Open to uploading water/services","Strong county advocacy; cautious about losing control"],
+      ["Economic development","Existing framework; tourism and business support","Explicit local-economy priority","Work with the development community","Dedicated policy and regional partnership"],
+      ["Transparency","Collaborative budget process","Major campaign theme","Clearer links between plans and budgets","Extensive public reporting and performance framework"]
+    ],
+    diffs:[
+      ["Who wields the mayor's new powers","Hamlin: sparingly, keep the collaborative approach. Hillis: won't voluntarily use them. Jeffery and Sandberg: delegate back, with Sandberg reserving them for exceptional cases."],
+      ["Water/wastewater governance","Jeffery has gone furthest, initiating the expression of interest. Hillis and Sandberg want to investigate first. Hamlin is open to studying it but stresses protecting town assets after the COLLUS/EPCOR experience."],
+      ["Arts centre","The clearest split: Hamlin wants a downtown centre; Hillis would consider starting inside the MURF; Jeffery lets demand decide; Sandberg wants it privately owned and run."],
+      ["Housing approach","All four want more housing. Hamlin leans on incentives, Hillis on evidence of what produces units, Jeffery on the existing master plan and dedicated money, Sandberg on workforce rentals and municipal land."],
+      ["Growth","No pro- versus anti-growth split. Hamlin manages growth around neighbourhood character; Hillis plans furthest ahead; Jeffery backs density in the right places; Sandberg wants servicing and approvals to move together."],
+      ["Underlying philosophy","Hamlin: continuity and major-project delivery. Hillis: modernization and measurable accountability. Jeffery: council-centred governance. Sandberg: financial and asset discipline with formal consensus governance."]
+    ]
+  };
+
+
+  /* ================= Plain-language layer (v4) =================
+     Rewrites each statement for people new to local politics and adds
+     a "why it matters" line. Meaning is kept the same as the original
+     wording, so the candidate scores above still apply. */
+  SRC.env = {label:"CollingwoodToday: environment forum at the Legion (Sept 18, 2026)", url:"https://www.collingwoodtoday.ca/local-news/collingwood-candidates-talk-environmental-protections-at-packed-legion-12799395"};
+  SRC.hillisSite = {label:"Jon Hillis campaign site", url:"https://hilliscwoodmayor.com/"};
+  SRC.hamlinSite = {label:"Yvonne Hamlin campaign site", url:"https://yvonnehamlin.com/"};
+  SRC.sandSite = {label:"Norm Sandberg campaign site", url:"https://norm4mayor.ca/"};
+  SRC.dates = {label:"CollingwoodToday: official notice of voting dates", url:"https://www.collingwoodtoday.ca/local-news/nominations-for-municipal-election-open-may-1-12119851"};
+  SRC.manual = {label:"Town of Collingwood: 2026 election procedures", url:"https://www.collingwood.ca/media/file/2026-collingwood-municipal-election-procedures-manualpdf"};
+
+  var SITES = {hamlin:"hamlinSite", hillis:"hillisSite", sandberg:"sandSite", jeffery:null};
+  var CONTACT = {jeffery:"kathyjefferyformayor@gmail.com (from the Town's certified candidate list)"};
+
+  QUESTIONS.splice(QUESTIONS.map(function(q){return q.id}).indexOf("storm")+1, 0, {
+    id:"env", topic:"Environment",
+    text:"The town should do more to protect natural areas like wetlands, woodlands and creeks, and report publicly on the results every year.",
+    help:"At a Sept 18 forum on the environment, candidates were asked for one specific commitment.",
+    pos:{
+      hamlin:{s:2, n:"Would introduce an annual accountability report on natural heritage, and says council must actually enforce the new Official Plan's protections through zoning, approvals and the budget.", src:"env"},
+      hillis:{s:2, n:"Would put the land securement fund already contemplated in the Official Plan into action, to protect key land before it's lost, with an annual public report on what's been protected and what's changed.", src:"env"},
+      jeffery:{s:null, n:"Attended the forum, but I couldn't confirm her specific answer from the coverage available.", src:"env"},
+      sandberg:{s:1, n:"Would build on existing protections in the Official Plan and zoning rather than create another plan, focusing on results and accountability.", src:"env"}
+    }
+  });
+
+  var PLAIN = {
+    delegate:{t:"The mayor should hand as many of their new \u201cstrong mayor\u201d powers as possible back to council and town staff.",
+      h:"Since 2025, Ontario has let Collingwood\u2019s mayor do some things alone, like write the budget and hire the town\u2019s top staff member (the CAO). The budget power can\u2019t be given back.",
+      w:"Whether one person or the whole council makes the big calls."},
+    arts:{t:"The town itself should build, own and run a new arts centre.",
+      h:"The arts centre is the most debated project in this race. The location and downtown parking are part of the conversation.",
+      w:"Whether your tax dollars build and run a theatre, or a private group does with town help."},
+    murf:{t:"Building a new multi-use recreation centre (think rinks, pools and gyms) should be a top priority.",
+      h:"People call it the MURF. All four candidates support one; they differ on how fast and in what order.",
+      w:"Where kids play hockey, where you swim, and what it costs to build."},
+    water:{t:"Collingwood should consider moving its water and sewer system into a shared regional public company if that helps pay for and speed up expansion.",
+      h:"In August, council asked the province for more information. That wasn\u2019t a vote to actually do it.",
+      w:"Who sets your water rates and who decides where new pipes go."},
+    growth:{t:"New developments, not current residents, should pay for the pipes and roads they need.",
+      h:"Builders pay fees called development charges to cover growth-related costs.",
+      w:"Whether new growth shows up on your tax bill."},
+    infra:{t:"Fixing roads, pipes and other basics based on condition and safety should come before newer, more visible projects.",
+      h:"Rebuilding everything the town owns would cost about $1.08 billion.",
+      w:"Potholes, water main breaks, and what gets fixed first."},
+    tax:{t:"Property tax increases should be kept as low as possible, even if some projects are delayed.",
+      h:"This year\u2019s increase was 2.39%. The town\u2019s long-term forecast points to about 4.8% a year from 2027 to 2035 to pay for current plans, though that isn\u2019t locked in.",
+      w:"Your property tax bill, or your rent, since landlords pass it on."},
+    storm:{t:"Preventing flooding should be one of the town\u2019s top spending priorities.",
+      h:"Council recently approved a stormwater plan worth roughly $35.5 million.",
+      w:"Flooded basements and home insurance costs."},
+    env:{t:null, h:null, w:"Wetlands and woodlands that soak up floodwater and make this place what it is."},
+    "housing-fund":{t:"The town should put a set amount of money into affordable housing every year.",
+      h:"One candidate\u2019s plan continues $350,000 a year. Others focus on different tools.",
+      w:"Whether people who work here can afford to live here."},
+    land:{t:"The town should use land it owns and team up with builders and non-profits to create homes working people can afford.",
+      h:"This includes partnering with Simcoe County, non-profits and private developers.",
+      w:"Homes for the nurses, servers, lift operators and teachers who keep the town running."},
+    density:{t:"Buildings around 12 storeys tall are OK in the right parts of town if it means less sprawl.",
+      h:"Candidates were asked about tall buildings near established neighbourhoods.",
+      w:"What the skyline and the edges of town look like in 20 years."},
+    pace:{t:"Collingwood should try to slow down how fast it\u2019s growing.",
+      h:"All four candidates accept that Collingwood will keep growing. This is about the pace.",
+      w:"Traffic, new neighbours, and pressure on services."},
+    parking:{t:"The town should build parking garages downtown that also include apartments and shops.",
+      h:"One candidate has proposed concepts at 140 Ste. Marie St and Second/Pine St. He calls them ideas that still need independent review.",
+      w:"How easy it is to park downtown, and what replaces the surface lots."}
+  };
+  QUESTIONS.forEach(function(q){
+    var p=PLAIN[q.id]; if(!p) return;
+    if(p.t) q.text=p.t;
+    if(p.h) q.help=p.h;
+    q.why=p.w;
+  });
+  COMPARE.rows.splice(6,0,["Environment","Annual natural-heritage accountability report; enforce Official Plan","Activate land securement fund; annual public report","Answer not confirmed from coverage","Build on existing protections; focus on results"]);
+
+  /* ================= Fun layer ================= */
+  var SCALE = [
+    {v:2,  t:"Totally",    e:"\uD83E\uDD29", full:"Strongly agree"},
+    {v:1,  t:"Sort of",    e:"\uD83D\uDE42", full:"Agree"},
+    {v:0,  t:"In between", e:"\uD83D\uDE10", full:"In between"},
+    {v:-1, t:"Not really", e:"\uD83D\uDE41", full:"Disagree"},
+    {v:-2, t:"No way",     e:"\uD83D\uDE20", full:"Strongly disagree"}
+  ];
+  var STOPS = {
+    delegate:{e:"\uD83C\uDFDB\uFE0F", where:"Town Hall"},
+    arts:{e:"\uD83C\uDFAD", where:"Downtown"},
+    murf:{e:"\uD83C\uDFD2", where:"The rec centre"},
+    water:{e:"\uD83D\uDCA7", where:"The water plant"},
+    growth:{e:"\uD83C\uDFD7\uFE0F", where:"The building site"},
+    infra:{e:"\uD83D\uDEE3\uFE0F", where:"Hurontario Street"},
+    tax:{e:"\uD83E\uDDFE", where:"The tax bill"},
+    storm:{e:"\uD83C\uDF0A", where:"The shoreline"},
+    "housing-fund":{e:"\uD83C\uDFE0", where:"The housing fund"},
+    land:{e:"\uD83E\uDD1D", where:"Town-owned land"},
+    density:{e:"\uD83C\uDFD9\uFE0F", where:"The skyline"},
+    pace:{e:"\uD83D\uDC22", where:"The growth dial"},
+    parking:{e:"\uD83C\uDD7F\uFE0F", where:"The parking lot"},
+    env:{e:"\uD83C\uDF32", where:"The escarpment"}
+  };
+  var SAILS = {hamlin:["#5b12b8","#ffffff","Y"], hillis:["#1f6b43","#ffffff","J"], jeffery:["#8a1a5c","#ffffff","K"], sandberg:["#f0bf2a","#12324a","N"], you:["#ee6446","#ffffff","\u2605"]};
+
+  var INK="#10283d";
+  function boatInner(id){
+    var s=SAILS[id];
+    return ''+
+      '<ellipse cx="32" cy="58" rx="27" ry="3.2" fill="#0b4f6e" opacity=".28"/>'+
+      '<path d="M5 45h54l-8.5 11.5H13.5z" fill="'+INK+'" stroke="'+INK+'" stroke-width="2" stroke-linejoin="round"/>'+
+      '<path d="M9 48.5h46" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity=".55"/>'+
+      '<rect x="30.8" y="5" width="3.2" height="41" rx="1.2" fill="'+INK+'"/>'+
+      '<path d="M35.8 8.5v34.5h19.5z" fill="'+s[0]+'" stroke="'+INK+'" stroke-width="2.2" stroke-linejoin="round"/>'+
+      '<path d="M35.8 8.5v34.5h5z" fill="#000" opacity=".12"/>'+
+      '<path d="M29 14.5v28.5H10.5z" fill="#ffffff" stroke="'+INK+'" stroke-width="2.2" stroke-linejoin="round"/>'+
+      '<path d="M29 14.5v28.5h-4.5z" fill="#dbe7ee"/>'+
+      '<text x="42.2" y="37.5" font-family="Fredoka,Nunito,Arial,sans-serif" font-weight="700" font-size="12.5" fill="'+s[1]+'">'+s[2]+'</text>'+
+      '<path d="M32.4 4.5l10 3.2-10 3.2z" fill="#ffc63d" stroke="'+INK+'" stroke-width="1.6" stroke-linejoin="round"/>'+
+      '<path d="M2 59q7.5-4.5 15 0t15 0 15 0 15 0" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" opacity=".9"/>';
+  }
+  function boat(id,cls){
+    return '<svg viewBox="0 0 64 64" class="'+(cls||'')+'" aria-hidden="true">'+boatInner(id)+'</svg>';
+  }
+
+  function heroSVG(){
+    var st='stroke="'+INK+'" stroke-width="2" stroke-linejoin="round"';
+    var thin='stroke="'+INK+'" stroke-width="1.5" stroke-linejoin="round"';
+    var h='<svg viewBox="0 0 400 236" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice">';
+    h+='<defs>'+
+      '<linearGradient id="hSky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8fd0ec"/><stop offset=".62" stop-color="#d9f1fb"/><stop offset="1" stop-color="#fff4dc"/></linearGradient>'+
+      '<linearGradient id="hWater" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#48acd0"/><stop offset="1" stop-color="#1c6f97"/></linearGradient>'+
+      '<linearGradient id="hMtn" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7fa9bf"/><stop offset="1" stop-color="#9dc0d1"/></linearGradient>'+
+      '<linearGradient id="hHill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4f9a78"/><stop offset="1" stop-color="#3a7f60"/></linearGradient>'+
+      '<clipPath id="hMtnClip"><path d="M150 132 C190 96 230 70 262 62 C292 56 330 64 400 88 V132Z"/></clipPath>'+
+    '</defs>';
+    h+='<rect width="400" height="236" fill="url(#hSky)"/>';
+    // sun
+    h+='<circle cx="334" cy="46" r="34" fill="#ffe08a" opacity=".45"/>';
+    h+='<circle cx="334" cy="46" r="21" fill="#ffc63d" '+st+'/>';
+    // clouds
+    var cloud=function(x,y,s){return '<g transform="translate('+x+' '+y+') scale('+s+')"><path d="M0 18c0-7 6-12 13-11 2-6 8-10 15-9 7 0 12 5 13 11 6 0 10 4 10 9H0z" fill="#fff" '+thin+'/></g>'};
+    h+=cloud(34,22,1.05)+cloud(196,34,.8)+cloud(372,86,.6);
+    // birds
+    h+='<path d="M120 40q4-4 8 0q4-4 8 0M146 30q3-3 6 0q3-3 6 0" fill="none" stroke="'+INK+'" stroke-width="1.6" stroke-linecap="round"/>';
+    // Blue Mountain with ski runs
+    h+='<path d="M150 132 C190 96 230 70 262 62 C292 56 330 64 400 88 V132Z" fill="url(#hMtn)" '+st+'/>';
+    h+='<g clip-path="url(#hMtnClip)" fill="#eef7fb" opacity=".95">'+
+      '<path d="M246 64l8-1-22 70h-8z"/><path d="M268 60l7 0-8 72h-8z"/><path d="M290 58l7 1 6 73h-8z"/><path d="M314 62l7 2 22 68h-9z"/><path d="M337 70l6 2 34 60h-9z"/>'+
+    '</g>';
+    // escarpment + near hills
+    h+='<path d="M0 118 C40 104 80 108 118 116 C150 122 170 112 210 114 C260 116 300 108 340 112 C370 115 388 110 400 112 V150H0Z" fill="url(#hHill)" '+st+'/>';
+    var trees=[[132,116],[142,118],[300,110],[312,111],[322,112],[356,113]];
+    trees.forEach(function(t){ h+='<path d="M'+t[0]+' '+(t[1]-12)+'l5 12h-10z" fill="#2f6f52" '+thin+'/>'; });
+    // Town Hall (left)
+    h+='<g>';
+    h+='<rect x="6" y="116" width="40" height="34" fill="#c96b4f" '+st+'/>';
+    h+='<rect x="96" y="112" width="44" height="38" fill="#d98a5c" '+st+'/>';
+    h+='<rect x="14" y="98" width="86" height="52" fill="#b8442e" '+st+'/>';
+    h+='<path d="M14 106h86M14 124h86" stroke="#8f3322" stroke-width="1.3"/>';
+    h+='<path d="M10 98h94l-5-7H15z" fill="#8e9aa1" '+st+'/>';
+    var w; for(w=0;w<4;w++){ var wx=[20,34,78,90][w]; h+='<path d="M'+wx+' 132v-8a3.5 3.5 0 0 1 7 0v8z" fill="#fff1d2" '+thin+'/>'; h+='<path d="M'+wx+' 146v-8a3.5 3.5 0 0 1 7 0v8z" fill="#fff1d2" '+thin+'/>'; }
+    [[102,120],[114,120],[126,120],[102,134],[114,134],[126,134]].forEach(function(p){ h+='<rect x="'+p[0]+'" y="'+p[1]+'" width="7" height="9" rx="1" fill="#fff1d2" '+thin+'/>'; });
+    [[12,124],[26,124],[12,136],[26,136]].forEach(function(p){ h+='<rect x="'+p[0]+'" y="'+p[1]+'" width="7" height="8" rx="1" fill="#fff1d2" '+thin+'/>'; });
+    // clock tower
+    h+='<rect x="47" y="58" width="22" height="92" fill="#b8442e" '+st+'/>';
+    h+='<path d="M47 78h22M47 100h22" stroke="#8f3322" stroke-width="1.3"/>';
+    h+='<rect x="45" y="54" width="26" height="6" fill="#e9dcc4" '+st+'/>';
+    h+='<path d="M44 55 L58 22 L72 55Z" fill="#3c9a82" '+st+'/>';
+    h+='<path d="M58 22 L64 55" stroke="#2b7864" stroke-width="1.4"/>';
+    h+='<path d="M58 22V12" stroke="'+INK+'" stroke-width="1.6"/><path d="M58 12l7 2.5-7 2.5z" fill="#ee6446" '+thin+'/>';
+    h+='<circle cx="58" cy="70" r="7.2" fill="#fff" '+st+'/>';
+    h+='<path d="M58 70v-4.5M58 70l3.2 1.8" stroke="'+INK+'" stroke-width="1.6" stroke-linecap="round"/>';
+    h+='<path d="M52 150v-14a6 6 0 0 1 12 0v14z" fill="#fff1d2" '+st+'/>';
+    h+='<path d="M50 94v-8a3 3 0 0 1 6 0v8zM60 94v-8a3 3 0 0 1 6 0v8z" fill="#fff1d2" '+thin+'/>';
+    h+='</g>';
+    // grain terminals (centre-right)
+    h+='<rect x="168" y="146" width="160" height="7" fill="#9aa3a8" '+st+'/>';
+    h+='<rect x="186" y="84" width="112" height="8" fill="#c7cdd1" '+st+'/>';
+    var s; for(s=0;s<8;s++){
+      var sx=188+s*13.5;
+      h+='<rect x="'+sx+'" y="91" width="13.5" height="56" rx="1" fill="#eef1f2" '+st+'/>';
+      h+='<rect x="'+(sx+9)+'" y="93" width="3" height="52" fill="#d3d9dc"/>';
+    }
+    h+='<rect x="272" y="46" width="22" height="40" fill="#d8dde0" '+st+'/>';
+    h+='<rect x="276" y="52" width="5" height="6" fill="'+INK+'" opacity=".75"/><rect x="285" y="52" width="5" height="6" fill="'+INK+'" opacity=".75"/>';
+    h+='<rect x="270" y="42" width="26" height="5" fill="#b7bec2" '+st+'/>';
+    h+='<rect x="184" y="68" width="28" height="18" fill="#d8dde0" '+st+'/>';
+    // lighthouse island (far right)
+    h+='<path d="M352 156c6-7 30-7 38 0z" fill="#6b8f7c" '+st+'/>';
+    h+='<path d="M366 154l3-30h8l3 30z" fill="#fff" '+st+'/>';
+    h+='<path d="M367.4 140h11.2" stroke="#ee6446" stroke-width="4"/>';
+    h+='<rect x="367" y="117" width="12" height="8" rx="1" fill="#ffc63d" '+st+'/>';
+    h+='<path d="M365 117h16l-8-7z" fill="#ee6446" '+st+'/>';
+    // water
+    h+='<path d="M0 150H400V236H0Z" fill="url(#hWater)"/>';
+    h+='<path d="M0 150H400" stroke="'+INK+'" stroke-width="2"/>';
+    // reflections
+    h+='<g opacity=".28" fill="#ffffff"><rect x="50" y="156" width="16" height="3" rx="1.5"/><rect x="54" y="163" width="10" height="3" rx="1.5"/><rect x="210" y="158" width="60" height="3" rx="1.5"/><rect x="224" y="166" width="34" height="3" rx="1.5"/><rect x="320" y="160" width="22" height="3" rx="1.5"/></g>';
+    // docks
+    h+='<path d="M140 152h28v5h-28z" fill="#a47449" '+st+'/>';
+    // boats
+    h+='<g transform="translate(18 164) scale(.78)"><g class="bob">'+boatInner("hamlin")+'</g></g>';
+    h+='<g transform="translate(112 170) scale(.78)"><g class="bob d1">'+boatInner("hillis")+'</g></g>';
+    h+='<g transform="translate(206 166) scale(.78)"><g class="bob d2">'+boatInner("jeffery")+'</g></g>';
+    h+='<g transform="translate(300 170) scale(.78)"><g class="bob d3">'+boatInner("sandberg")+'</g></g>';
+    // foreground waves
+    var wave=function(y,o,sw){var d="M-10 "+y; for(var k=0;k<22;k++){d+=" q10 -5 20 0";} return '<path d="'+d+'" fill="none" stroke="#fff" stroke-width="'+sw+'" stroke-linecap="round" opacity="'+o+'"/>'};
+    h+=wave(222,.55,3)+wave(232,.35,3);
+    h+='</svg>';
+    return h;
+  }
+
+  /* candidate ordering for brand colours */
+  CANDS.forEach(function(c){ c.sail=SAILS[c.id]; });
+
+  var state = {i:-1, answers:{}, important:{}, done:false};
+
+  function $(id){return document.getElementById(id)}
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+  function srcLink(k){
+    var s=SRC[k];
+    if(!s.url) return esc(s.label);
+    return '<a href="'+s.url+'" target="_blank" rel="noopener noreferrer">'+esc(s.label)+'</a>';
+  }
+  function stanceLabel(s){
+    if(s===null) return "No documented position";
+    return ({"2":"Strongly agrees","1":"Agrees","0":"In between / depends","-1":"Disagrees","-2":"Strongly disagrees"})[String(s)];
+  }
+  function reduced(){ return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; }
+
+  /* ---------- Saved progress & share codes ---------- */
+  var KEY="cwmc-v4", viewingShared=false;
+  var CODE={"2":"a","1":"b","0":"c","-1":"d","-2":"e"}, DECODE={a:2,b:1,c:0,d:-1,e:-2};
+  function save(){ try{ localStorage.setItem(KEY, JSON.stringify(state)); }catch(e){} }
+  function load(){ try{ var s=JSON.parse(localStorage.getItem(KEY)||"null"); if(s&&s.answers) return s; }catch(e){} return null; }
+  function clearSave(){ try{ localStorage.removeItem(KEY); }catch(e){} }
+  function encode(){
+    return QUESTIONS.map(function(q){
+      var a=state.answers[q.id]; if(a===undefined) return "-";
+      var c=CODE[String(a)]; return state.important[q.id]?c.toUpperCase():c;
+    }).join("");
+  }
+  function decode(str){
+    if(!str||str.length!==QUESTIONS.length) return null;
+    var s={i:QUESTIONS.length-1, answers:{}, important:{}, done:true};
+    for(var k=0;k<str.length;k++){
+      var ch=str.charAt(k), q=QUESTIONS[k];
+      if(ch==="-") continue;
+      var v=DECODE[ch.toLowerCase()]; if(v===undefined) return null;
+      s.answers[q.id]=v; if(ch!==ch.toLowerCase()) s.important[q.id]=true;
+    }
+    return s;
+  }
+  function shareURL(){
+    var base=(location.href||"").split("#")[0];
+    return base+"#r="+encode();
+  }
+
+  function setCompact(on){ document.body.classList.toggle("compact", !!on); }
+
+  /* ---------- Compass flow ---------- */
+  function renderQuiz(focusSel){
+    var el=$("view-quiz");
+    setCompact(state.i>=0);
+    if(state.done){ el.innerHTML=resultsHTML(); bindResults(); revealRace(); return; }
+    if(state.i<0){
+      var fleet=CANDS.map(function(c,k){return '<div>'+boat(c.id,"bob"+(k?" d"+k:""))+'<span>'+esc(c.name.split(" ")[0])+'</span></div>'}).join('');
+      var saved=load(), hasSaved=saved && Object.keys(saved.answers).length>0 && !saved.done;
+      el.innerHTML =
+        '<div class="card"><h2>Which boat is headed your way?</h2>'+
+        '<p class="lede">Answer '+QUESTIONS.length+' quick questions about things that shape daily life in Collingwood, from potholes to parking to your tax bill. Then the four mayoral candidates\u2019 boats race. The one that sails furthest has positions closest to yours.</p>'+
+        '<div class="dock"><div class="fleet" aria-label="The four candidates">'+fleet+'</div></div>'+
+        '<p class="muted">About three minutes. No sign-up, and nothing you answer leaves your device unless you share it.</p>'+
+        '<div class="notice"><strong>Good to know:</strong> positions come from campaign platforms, local reporting, Town records, a candidate questionnaire and a public forum. Yvonne Hamlin didn\u2019t return the questionnaire, so a few of her positions are less documented. If a position couldn\u2019t be found, that candidate sits out the question instead of getting a guess.</div>'+
+        (hasSaved
+          ? '<div class="resume"><button class="btn" id="resume">Pick up where you left off</button><button class="btn secondary" id="start">Start fresh</button></div>'
+          : '<button class="btn" id="start">Set sail</button>')+
+        '</div>';
+      $("start").onclick=function(){state={i:0,answers:{},important:{},done:false};save();renderQuiz();window.scrollTo(0,0)};
+      var r=$("resume"); if(r) r.onclick=function(){state=saved;renderQuiz();window.scrollTo(0,0)};
+      return;
+    }
+    var q=QUESTIONS[state.i], cur=state.answers[q.id], imp=!!state.important[q.id], N=QUESTIONS.length;
+    var st=STOPS[q.id]||{e:"\u26F5",where:q.topic};
+    var frac=N>1?state.i/(N-1):0;
+    var dots=''; for(var k=0;k<N;k++){ dots+= k<state.i?'<i class="done"></i>':(k===state.i?'<i class="now">'+boat("you")+'</i>':'<i></i>'); }
+    var html='<div class="route" aria-hidden="true">'+dots+'</div>'+
+      '<p class="stopnote"><span>Stop '+(state.i+1)+' of '+N+'</span><span>'+(N-state.i-1===0?'Last stop':(N-state.i-1)+' to go')+'</span></p>'+
+      '<div class="card"><div class="badge"><div class="em" aria-hidden="true">'+st.e+'</div><div><div class="where">'+esc(st.where)+'</div><div class="topic">'+esc(q.topic)+'</div></div></div>'+
+      '<p class="stmt" id="qtext">'+esc(q.text)+'</p><p class="muted">'+esc(q.help)+'</p>'+
+      (q.why?'<p class="why"><span aria-hidden="true">\uD83D\uDC49</span><span><b>Why it matters:</b> '+esc(q.why)+'</span></p>':'')+
+      '<div class="faces" role="group" aria-labelledby="qtext">';
+    SCALE.forEach(function(o){
+      html+='<button class="face" data-v="'+o.v+'" aria-pressed="'+(cur===o.v)+'" aria-label="'+o.full+'"><span class="e" aria-hidden="true">'+o.e+'</span><span class="l">'+o.t+'</span></button>';
+    });
+    html+='</div><button class="star" id="imp" aria-pressed="'+imp+'"><span aria-hidden="true">\u2B50</span> This one matters extra to me</button>'+
+      '<div class="row" style="margin-top:6px"><button class="linkbtn" id="skip">Skip, I don\u2019t know enough yet</button></div></div>'+
+      '<div class="navrow">'+(state.i>0?'<button class="btn secondary" id="back" style="width:auto;padding:12px 18px">Back</button>':'<span></span>')+
+      '<button class="btn" id="next" '+(cur===undefined?'disabled':'')+'>'+(state.i===N-1?'Start the race':'Next stop')+'</button></div>';
+    el.innerHTML=html;
+
+    Array.prototype.forEach.call(el.querySelectorAll(".face"),function(b){
+      b.onclick=function(){state.answers[q.id]=parseInt(b.getAttribute("data-v"),10);save();renderQuiz("#next")};
+    });
+    $("imp").onclick=function(){state.important[q.id]=!state.important[q.id];save();renderQuiz("#imp")};
+    $("skip").onclick=function(){delete state.answers[q.id];advance()};
+    $("next").onclick=function(){ if(state.answers[q.id]!==undefined) advance() };
+    var bb=$("back"); if(bb) bb.onclick=function(){state.i--;save();renderQuiz();window.scrollTo(0,0)};
+    if(focusSel){ var f=el.querySelector(focusSel); if(f) f.focus({preventScroll:true}); }
+  }
+  function advance(){
+    if(state.i>=QUESTIONS.length-1){state.done=true}
+    else state.i++;
+    save();
+    renderQuiz();
+    window.scrollTo(0,0);
+  }
+
+  function score(){
+    return CANDS.map(function(c){
+      var num=0, den=0, used=0;
+      QUESTIONS.forEach(function(q){
+        var a=state.answers[q.id]; if(a===undefined) return;
+        var p=q.pos[c.id]; if(!p||p.s===null) return;
+        var w=state.important[q.id]?2:1;
+        num+=w*(1-Math.abs(a-p.s)/4); den+=w; used++;
+      });
+      return {c:c, pct: den? Math.round(100*num/den):null, used:used};
+    });
+  }
+
+  var lastSorted=[], lastAnswered=0;
+  function posBlock(q,c){
+    var p=q.pos[c.id];
+    return '<div class="pos" style="border-left-color:'+c.color+'"><strong>'+esc(c.name)+'</strong><span class="tag">'+esc(stanceLabel(p.s))+'</span><br>'+esc(p.n)+'<br><span class="muted">Source: '+srcLink(p.src)+'</span></div>';
+  }
+  function resultsHTML(){
+    var answered=QUESTIONS.filter(function(q){return state.answers[q.id]!==undefined}).length;
+    lastAnswered=answered;
+    if(!answered){
+      return '<div class="card"><h2>The boats never left the dock</h2><p>You skipped every question, so there\u2019s nothing to compare yet.</p><button class="btn" id="restart">Start over</button></div>';
+    }
+    var sc=score().sort(function(a,b){
+      if(a.pct===null&&b.pct===null) return 0; if(a.pct===null) return 1; if(b.pct===null) return -1;
+      return b.pct-a.pct;
+    });
+    lastSorted=sc;
+    var top=sc[0], second=sc[1];
+    var close = top.pct!==null && second && second.pct!==null && (top.pct-second.pct)<=10;
+    var html='';
+    if(viewingShared){
+      html+='<div class="shared">Someone shared their results with you. Want to see where your boat lands? <button class="btn" id="mine" style="margin-top:10px">Take the quiz yourself</button></div>';
+    }
+    html+='<div class="card"><h2>'+(viewingShared?'Their race':'The race is on')+'</h2><p class="muted">Based on '+answered+' answered question'+(answered===1?'':'s')+'. The percentage is how closely each candidate\u2019s documented positions match. Higher sails further.</p>';
+    sc.forEach(function(r,idx){
+      html+='<div class="lane'+(idx===0&&r.pct!==null?' best':'')+'" data-pct="'+(r.pct===null?'':r.pct)+'">'+
+        '<div class="top"><span class="who"><span class="rank">'+(idx+1)+'</span>'+esc(r.c.name)+'</span><span class="pct">'+(r.pct===null?'no data':r.pct+'%')+'</span></div>'+
+        '<span class="finish" aria-hidden="true">\uD83C\uDFC1</span><span class="wake" aria-hidden="true"></span>'+
+        '<div class="b">'+boat(r.c.id)+'</div></div>'+
+        '<p class="small" style="margin:-2px 0 10px 4px">'+(r.used?('Based on '+r.used+' of '+answered+' answers'):'No overlapping documented positions')+'</p>';
+    });
+    html+='</div>';
+
+    if(top.pct!==null){
+      html+='<div class="card"><div class="winner">'+boat(top.c.id,"bob")+'<div><h2 style="margin-bottom:4px">Closest match: '+esc(top.c.name)+'</h2>'+
+        '<p style="margin:0">'+(close?'It\u2019s tight. '+esc(second.c.name)+' is within 10 points, so treat this as a near tie and look at the details below.':'Based on the positions we could document, '+esc(top.c.name.split(" ")[0])+'\u2019s boat sails closest.')+'</p></div></div>'+
+        '<div class="notice" style="margin:14px 0 0">This is a starting point, not a verdict. A match built on only a few questions tells you less than one built on many, and candidates agree on a lot. Their experience, track record and how they\u2019d work with council aren\u2019t measured here.</div></div>';
+    }
+
+    var starred=QUESTIONS.filter(function(q){return state.important[q.id] && state.answers[q.id]!==undefined});
+    if(starred.length){
+      html+='<div class="card starsum"><h2>'+(viewingShared?'Their':'Your')+' starred issues</h2><p class="muted">These counted double. Here\u2019s where each candidate stands.</p>';
+      starred.forEach(function(q){
+        var st=STOPS[q.id]||{e:""};
+        html+='<h3 style="margin-top:14px">'+st.e+' '+esc(q.topic)+'</h3><p class="muted" style="margin:4px 0 0">'+esc(q.text)+' <span class="tag">'+esc(SCALE.filter(function(o){return o.v===state.answers[q.id]})[0].full)+'</span></p>';
+        CANDS.forEach(function(c){ html+=posBlock(q,c); });
+      });
+      html+='</div>';
+    }
+
+    html+='<div class="card"><h2>See why, question by question</h2>';
+    QUESTIONS.forEach(function(q){
+      var a=state.answers[q.id];
+      var mine = a===undefined ? "Skipped" : SCALE.filter(function(o){return o.v===a})[0].full;
+      var st=STOPS[q.id]||{e:""};
+      html+='<details><summary>'+st.e+' '+esc(q.topic)+' <span class="tag">'+esc(mine)+'</span></summary><p class="muted" style="margin-top:8px">'+esc(q.text)+'</p>';
+      CANDS.forEach(function(c){ html+=posBlock(q,c); });
+      html+='</details>';
+    });
+    html+='</div>';
+    if(!viewingShared){
+      html+='<button class="btn" id="share">Share my results</button>'+
+        '<p class="small" id="sharemsg" style="text-align:center;margin:8px 0 0" role="status"></p>'+
+        '<button class="btn secondary" id="goVote">Find out how and when to vote</button>'+
+        '<button class="btn secondary" id="restart">Race again</button>';
+    } else {
+      html+='<button class="btn secondary" id="goVote">Find out how and when to vote</button>';
+    }
+    return html;
+  }
+
+  function revealRace(){
+    var lanes=document.querySelectorAll(".lane");
+    if(!lanes.length) return;
+    var go=function(){
+      Array.prototype.forEach.call(lanes,function(l){
+        var raw=l.getAttribute("data-pct");
+        var f=raw===""?0:Math.max(0,Math.min(100,parseInt(raw,10)))/100;
+        l.querySelector(".b").style.left="calc(2% + (100% - 54px - 9%) * "+f+")";
+        l.querySelector(".wake").style.width="calc((100% - 54px - 12%) * "+f+" + 20px)";
+      });
+    };
+    if(reduced()){ go(); } else { setTimeout(go,120); }
+    if(!viewingShared && lastSorted[0] && lastSorted[0].pct!==null && lastAnswered>=3 && !reduced()){ setTimeout(confetti,1300); }
+  }
+
+  function confetti(){
+    var box=$("confetti"); box.innerHTML="";
+    var bits=["\u26F5","\uD83C\uDF89","\u2728","\uD83C\uDFC1","\uD83C\uDF8A"];
+    for(var i=0;i<22;i++){
+      var s=document.createElement("span");
+      s.textContent=bits[i%bits.length];
+      s.style.left=(Math.random()*96)+"%";
+      s.style.animationDelay=(Math.random()*.8)+"s";
+      s.style.fontSize=(18+Math.random()*16)+"px";
+      box.appendChild(s);
+    }
+    setTimeout(function(){box.innerHTML=""},4200);
+  }
+
+  function shareText(){
+    var lines=["My Collingwood Mayor Compass results:"];
+    lastSorted.forEach(function(r){
+      lines.push("\u26F5 "+r.c.name+": "+(r.pct===null?"not enough data":r.pct+"% match"));
+    });
+    lines.push("Online voting opens Oct 8. Election day is Oct 26. See where your boat lands:");
+    return lines.join("\n");
+  }
+  function bindResults(){
+    var r=$("restart"); if(r) r.onclick=function(){state={i:-1,answers:{},important:{},done:false};clearSave();renderQuiz();window.scrollTo(0,0)};
+    var m=$("mine"); if(m) m.onclick=function(){viewingShared=false;try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}state={i:-1,answers:{},important:{},done:false};renderQuiz();window.scrollTo(0,0)};
+    var v=$("goVote"); if(v) v.onclick=function(){show("about")};
+    var s=$("share"); if(s) s.onclick=function(){
+      var msg=$("sharemsg"), url=shareURL(), text=shareText();
+      if(navigator.share){
+        navigator.share({title:"Collingwood Mayor Compass", text:text, url:url}).catch(function(){});
+        return;
+      }
+      try{
+        navigator.clipboard.writeText(text+" "+url).then(function(){msg.textContent="Link copied. Paste it anywhere."},function(){msg.textContent="Couldn\u2019t copy here. Try a screenshot instead."});
+      }catch(e){ msg.textContent="Couldn\u2019t copy here. Try a screenshot instead."; }
+    };
+  }
+
+  /* ---------- Compare ---------- */
+  function renderCompare(){
+    var html='<div class="card"><h2>Side by side</h2><p class="muted" style="margin:0">A summary of each candidate\u2019s documented position. Swipe sideways to see all four. Yvonne Hamlin did not return the questionnaire, so her column leans more on her campaign statements, budget and council record.</p></div>';
+    html+='<div class="tablewrap"><table><thead><tr>';
+    COMPARE.cols.forEach(function(c){
+      var cand=CANDS.filter(function(x){return x.name.indexOf(c)>-1})[0];
+      html+='<th>'+(cand?'<span class="hd">'+boat(cand.id)+esc(c)+'</span>':esc(c))+'</th>';
+    });
+    html+='</tr></thead><tbody>';
+    COMPARE.rows.forEach(function(r){
+      html+='<tr>'+r.map(function(c){return '<td>'+esc(c)+'</td>'}).join('')+'</tr>';
+    });
+    html+='</tbody></table></div>';
+    html+='<div class="card"><h2>Where they really differ</h2>';
+    COMPARE.diffs.forEach(function(d){
+      html+='<h3 style="margin-top:14px">'+esc(d[0])+'</h3><p style="margin:4px 0 0">'+esc(d[1])+'</p>';
+    });
+    html+='</div>';
+    html+=methodHTML();
+    $("view-compare").innerHTML=html;
+  }
+
+  /* ---------- Candidates ---------- */
+  function renderCands(){
+    var html='<p class="muted" style="margin:0 4px 14px">Listed alphabetically by last name, as on the ballot.</p>';
+    CANDS.forEach(function(c){
+      var site=SITES[c.id];
+      html+='<div class="card cand" style="--cc:'+c.color+'"><div class="head">'+boat(c.id,"bob")+'<div><h2>'+esc(c.name)+'</h2><p>'+esc(c.role)+'</p></div></div><div class="body"><ul>'+
+        c.bio.map(function(b){return '<li>'+esc(b)+'</li>'}).join('')+
+        '</ul><p style="margin:0 0 8px"><strong>Hear it from them:</strong> '+(site?srcLink(site):esc(CONTACT[c.id]||""))+'</p>'+
+        '<p class="muted" style="margin:0">Sources: '+c.src.map(srcLink).join(' &middot; ')+'</p></div></div>';
+    });
+    $("view-cands").innerHTML=html;
+  }
+
+  /* ---------- How to vote ---------- */
+  function methodHTML(){
+    return '<div class="card"><h2>How the compass works</h2>'+
+      '<p>Your answer and each candidate\u2019s stance are placed on the same five-step scale, from strongly disagree to strongly agree. A candidate\u2019s stance is our reading of what they said in platforms, interviews, a written questionnaire, a public forum and official statements. The closer the two, the higher the match. Starred questions count double.</p>'+
+      '<ul><li>If a candidate\u2019s position wasn\u2019t documented, they sit that question out. Nobody gets a guessed answer.</li>'+
+      '<li>Stances are interpretations and can be wrong. When candidates back the same goal by different means, one scale flattens that, so read the notes.</li>'+
+      '<li>Yvonne Hamlin did not return the questionnaire the other three answered. Fewer documented positions reflects the record, not a judgment on her.</li>'+
+      '<li>Jon Hillis\u2019s written answer on strong-mayor powers is firmer than his earlier interview. The compass uses the written answer.</li>'+
+      '<li>Each candidate is drawn as a sailboat rather than a portrait. The illustrations are original, and sail colours nod to each campaign\u2019s signs.</li></ul></div>';
+  }
+  function renderAbout(){
+    var d=function(mon,day,title,body){return '<div class="date"><div class="d"><small>'+mon+'</small><span>'+day+'</span></div><p><strong>'+title+'</strong><br>'+body+'</p></div>'};
+    $("view-about").innerHTML=
+      '<div class="card"><h2>Your vote, your way</h2>'+
+      '<p>In Collingwood you can vote online from home or on paper in person.</p>'+
+      '<div class="dates">'+
+        d("Oct","\u2709\uFE0F","Watch your mailbox","Your Voter Information Letter arrives with your PIN and instructions.")+
+        d("Oct","8","Online voting opens","10 a.m. Vote any time, anywhere, until 8 p.m. on Oct 26.")+
+        d("Oct","15","Advance poll (paper)","Also on Oct 22 and Oct 25. Check the Town for times and location.")+
+        d("Oct","26","Election day","10 a.m. to 8 p.m., online or on paper.")+
+      '</div>'+
+      '<p class="small" style="margin-top:10px">Dates come from the Town\u2019s notices and can change. Confirm on the '+srcLink("town")+'.</p></div>'+
+      '<div class="card"><h2>Can I vote?</h2>'+
+      '<p>You can vote if, on election day, you\u2019re 18 or older, a Canadian citizen, and you live in, own or rent property in Collingwood.</p>'+
+      '<p style="margin:0">Not sure you\u2019re on the voters\u2019 list? Contact the Town Clerk\u2019s office. The Town\u2019s election page has details.</p></div>'+
+      '<div class="card"><h2>What\u2019s on your ballot</h2>'+
+      '<p style="margin:0">You\u2019ll choose a mayor, a deputy mayor, up to seven councillors and a school board trustee. Everyone votes for all seats. There are no wards. This compass only covers the mayor\u2019s race.</p></div>'+
+      '<p class="small" style="margin:0 4px 16px">Sources: '+srcLink("town")+' &middot; '+srcLink("dates")+' &middot; '+srcLink("manual")+'</p>';
+  }
+
+  function countdown(){
+    var el=$("countdown"); if(!el) return;
+    var now=new Date(), eday=new Date(2026,9,26), online=new Date(2026,9,8,10);
+    var days=Math.ceil((eday - new Date(now.getFullYear(),now.getMonth(),now.getDate()))/86400000);
+    if(days>1) el.textContent=days+" days until election day, Monday, October 26"+(now<online?". Online voting opens Oct 8.":". Online voting is open now.");
+    else if(days===1) el.textContent="Election day is tomorrow, Monday, October 26.";
+    else if(days===0) el.textContent="It\u2019s election day! Voting closes at 8 p.m.";
+    else el.textContent="The 2026 election was held on October 26.";
+    var e2=$("countdown2"); if(e2) e2.textContent = days>1 ? days+" days to election day" : (days===1?"Election day is tomorrow":(days===0?"Election day: vote by 8 p.m.":"Election held Oct 26"));
+  }
+
+  /* ---------- Tabs ---------- */
+  function show(which){
+    ["quiz","compare","cands","about"].forEach(function(k){
+      $("view-"+k).classList.toggle("hidden",k!==which);
+      $("tab-"+k).setAttribute("aria-selected",String(k===which));
+    });
+    setCompact(which!=="quiz" || state.i>=0);
+    window.scrollTo(0,0);
+  }
+  ["quiz","compare","cands","about"].forEach(function(k){
+    $("tab-"+k).onclick=function(){show(k)};
+  });
+
+  /* ---------- Start ---------- */
+  $("hero").innerHTML=heroSVG();
+  $("mark").innerHTML=boat("you");
+  countdown();
+  var m=(location.hash||"").match(/^#r=([a-eA-E-]+)$/), fromLink=m&&decode(m[1]);
+  if(fromLink){ viewingShared=true; state=fromLink; }
+  else { var s=load(); if(s&&s.done){ state=s; } }
+  renderQuiz(); renderCompare(); renderCands(); renderAbout();
+})();
+</script>
+</body>
+</html>
