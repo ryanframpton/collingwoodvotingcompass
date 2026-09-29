@@ -217,6 +217,7 @@ tr:last-child td{border-bottom:0}
 }
 
 </style>
+  <script data-goatcounter="https://ryanframpton.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 </head>
 <body>
 <main>
@@ -683,6 +684,11 @@ tr:last-child td{border-bottom:0}
   }
   function reduced(){ return window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches; }
 
+  /* Anonymous event counts only (no answers, no candidate results are ever sent). */
+  function track(name,title){
+    try{ if(window.goatcounter && window.goatcounter.count){ window.goatcounter.count({path:name,title:title,event:true}); } }catch(e){}
+  }
+
   /* ---------- Saved progress & share codes ---------- */
   var KEY="cwmc-v4", viewingShared=false;
   var CODE={"2":"a","1":"b","0":"c","-1":"d","-2":"e"}, DECODE={a:2,b:1,c:0,d:-1,e:-2};
@@ -725,13 +731,13 @@ tr:last-child td{border-bottom:0}
         '<div class="card"><h2>Which boat is headed your way?</h2>'+
         '<p class="lede">Answer '+QUESTIONS.length+' quick questions about things that shape daily life in Collingwood, from potholes to parking to your tax bill. Then the four mayoral candidates\u2019 boats race. The one that sails furthest has positions closest to yours.</p>'+
         '<div class="dock"><div class="fleet" aria-label="The four candidates">'+fleet+'</div></div>'+
-        '<p class="muted">About three minutes. No sign-up, and nothing you answer leaves your device unless you share it.</p>'+
+        '<p class="muted">About three minutes. No sign-up. We count visits anonymously, but your answers stay on your device unless you share them.</p>'+
         '<div class="notice"><strong>Good to know:</strong> positions come from campaign platforms, local reporting, Town records, a candidate questionnaire and a public forum. Yvonne Hamlin didn\u2019t return the questionnaire, so a few of her positions are less documented. If a position couldn\u2019t be found, that candidate sits out the question instead of getting a guess.</div>'+
         (hasSaved
           ? '<div class="resume"><button class="btn" id="resume">Pick up where you left off</button><button class="btn secondary" id="start">Start fresh</button></div>'
           : '<button class="btn" id="start">Set sail</button>')+
         '</div>';
-      $("start").onclick=function(){state={i:0,answers:{},important:{},done:false};save();renderQuiz();window.scrollTo(0,0)};
+      $("start").onclick=function(){track("quiz-started","Started the quiz");state={i:0,answers:{},important:{},done:false};save();renderQuiz();window.scrollTo(0,0)};
       var r=$("resume"); if(r) r.onclick=function(){state=saved;renderQuiz();window.scrollTo(0,0)};
       return;
     }
@@ -764,7 +770,7 @@ tr:last-child td{border-bottom:0}
     if(focusSel){ var f=el.querySelector(focusSel); if(f) f.focus({preventScroll:true}); }
   }
   function advance(){
-    if(state.i>=QUESTIONS.length-1){state.done=true}
+    if(state.i>=QUESTIONS.length-1){state.done=true;track("quiz-completed","Finished the quiz")}
     else state.i++;
     save();
     renderQuiz();
@@ -896,6 +902,7 @@ tr:last-child td{border-bottom:0}
     var m=$("mine"); if(m) m.onclick=function(){viewingShared=false;try{history.replaceState(null,"",location.pathname+location.search)}catch(e){}state={i:-1,answers:{},important:{},done:false};renderQuiz();window.scrollTo(0,0)};
     var v=$("goVote"); if(v) v.onclick=function(){show("about")};
     var s=$("share"); if(s) s.onclick=function(){
+      track("share-clicked","Tapped Share my results");
       var msg=$("sharemsg"), url=shareURL(), text=shareText();
       if(navigator.share){
         navigator.share({title:"Collingwood Mayor Compass", text:text, url:url}).catch(function(){});
